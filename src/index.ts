@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import BooksProvider from './repositories/mocks/booksProvider.ts'
+import BooksProvider from './repositories/booksProvider.ts'
 import { createBooksRoutes } from './routes/booksRoutes.ts'
 
 const app = express()
