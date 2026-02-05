@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import axios from "axios";
 import { Book } from "../../models/book";
 import { BooksProvider } from "../../providers/books.ts";
