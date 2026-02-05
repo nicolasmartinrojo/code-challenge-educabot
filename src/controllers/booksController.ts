@@ -1,6 +1,7 @@
 import { Request, Response } from 'express'
 import { BooksProvider } from '../providers/books.ts'
 import { Book } from '../models/book.ts'
+import { BooksProviderError } from '../repositories/booksProvider.ts'
 
 interface GetBooksQuery {
   author?: string
@@ -24,7 +25,11 @@ export class BooksController {
         books_written_by_author: booksWrittenByAuthor,
       })
     } catch (error) {
-      res.status(500).json({ error: 'Internal server error' })
+        if(error instanceof BooksProviderError){
+            res.status(500).json({ error: error.message})
+        }else {
+            res.status(500).json({ error: 'Internal server error' })
+        }
     }
   }
 
