@@ -7,9 +7,9 @@ import { Book } from '../models/book'
 describe('metricsHandler', () => {
   // Mock data
   const mockBooks: Book[] = [
-    { id: 1, name: 'Book 1', author: 'Author 1', unitsSold: 100, price: 20 },
-    { id: 2, name: 'Book 2', author: 'Author 2', unitsSold: 200, price: 15 },
-    { id: 3, name: 'Book 3', author: 'Author 1', unitsSold: 300, price: 25 }
+    { id: 1, name: 'Book 1', author: 'Author 1', units_sold: 100, price: 20 },
+    { id: 2, name: 'Book 2', author: 'Author 2', units_sold: 200, price: 15 },
+    { id: 3, name: 'Book 3', author: 'Author 1', units_sold: 300, price: 25 }
   ]
 
   // Mock BooksProvider
